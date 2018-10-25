@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+
+
+	<div id="dd">
+	<template v-for="user in users">
+		<!-- <input v-model=user.age></input> -->
+		<input type="checkbox"  v-bind:value="user.age" v-model="uu"></input>
+		<!-- <input type="checkbox" v-else v-bind:value="user.age" v-model="uu"></input> -->
+		
+	</template>
+	<button @click="dd()">00</button>
+	</div>
+</body>
+<script type="text/javascript">
+	var vm = new Vue({
+		el:'#dd',
+  		data:{
+  			users:[
+  				{name:"aa",age:10},
+  				{name:"bb",age:20},
+  				{name:"cc",age:30}
+  			],
+  			uu:[20,30]
+  		},
+  		methods:{
+  			 dd(){
+  				console.log(this.uu);
+  			}
+  		}
+	})
+
+</script>
+</html>

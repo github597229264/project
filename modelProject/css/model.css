@@ -1,0 +1,183 @@
+@import url("iconfont.css");/*引入矢量图标*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html,
+body{
+	font-family: PingFangSC;
+	background-color: #FFFFFF;
+    /*padding-top: constant(safe-area-inset-top);   //为导航栏+状态栏的高度 88px*/            
+    padding-left: constant(safe-area-inset-left);   /*如果未竖屏时为0*/                
+    padding-right: constant(safe-area-inset-right); /*如果未竖屏时为0*/                
+    /*padding-bottom: constant(safe-area-inset-bottom);//为底下圆弧的高度 34px*/    
+    -webkit-overflow-scrolling:touch;   
+    color: #666666;
+}
+/* 头部  */
+header{
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 0.5rem;
+	background: #F75040;
+	font-size: 0.18rem;
+	z-index: 100;
+}
+.agentBack,.agentBack1{
+	display: block;
+	width: 20%;
+	height: 100%;
+	float: left;
+}
+.agentBack img,
+.agentBack1 img{
+    display: block;
+    width: 0.25rem;
+    height: 0.28rem;
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+.agentSpan{
+	display: block;
+	width: 60%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 0.5rem;
+	color: #fff;
+}
+/*主体内容*/
+.content{
+    padding-top: 0.1rem;
+    margin: 0.5rem 0 0.34rem;
+}
+/* 功能列表头部说明 */
+.coreFun{
+	width:100%;
+	color: #666;
+	font-size: 0.3rem;
+	background: #fff;
+}
+.coreFun span{
+    display: inline-block;
+    margin: 0.1rem 0 0.1rem 5.32%;
+    font-size: 0.18rem;
+    font-weight: 600;
+    text-indent: 0.1rem;
+    line-height: 0.25rem;
+}
+.coreFun span::before{
+    content: "|";
+    height: 0.18rem;
+    position: absolute;
+    left: 0.1rem;
+    font-size: 0.15rem;
+    font-weight: 600;
+}
+span.green::before{
+    color: #50E3C2;
+}
+span.yellow::before{
+    color: #F5A623;
+}
+/*列表*/
+.list{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.list li{
+	width: 100%;
+	background-color: #fff;
+	color: #666;
+	font-size: 0.27rem;
+	cursor: pointer;
+}
+.list li section{
+	width: 100%;
+}
+.core li:nth-child(odd){
+	background-color: #F5F5F5;
+}
+.non-core li:nth-child(odd){
+	background-color: #F5F5F5;
+}
+section .question{
+    display: inline-block;
+    width: 80.3%;
+    margin: 0.13rem 0 0.13rem 5.32%;
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: text-top;
+    font-weight: 500;
+}
+section .iconfont{
+    margin-left: 3%;
+    width: 20%;
+    font-size: 0.28rem;
+    vertical-align: middle;
+}
+/*回答图文*/
+.answer {
+	width: auto;
+    display: none;
+    padding: 0.34rem 0;
+    background-color: #ffffff;
+}
+.answer img{
+	display: block;
+	width: 78.72%;
+	margin: 0 auto;
+	margin-top: 0.34rem;
+}
+.answer img:nth-child(1){
+	margin-top: 0;
+}
+.imgDes{
+	display: block;
+	width: 78.72%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 0.34rem;
+	color: #878787;
+	font-size: 0.24rem;
+}
+.imgText{
+	display: block;
+	width: 78.72%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 0.34rem;
+	color: #878787;
+	font-size: 0.24rem;
+	text-align: center;
+}
+/*返回顶部*/
+.back-to-top{
+    width: 0.45rem;
+    height: 0.45rem;
+    position: fixed;
+    bottom: 0.88rem;
+    right: 0.15rem;
+    z-index: 75;
+    border-radius: 50%;
+    box-shadow: 0px 0px 16px #888;
+}
+.back_top{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.void{
+	text-align: center;
+	width: 100%;
+	height: 1rem;
+	font-size: 0.4rem;
+	padding-top: 1.19rem;
+	color: #999;
+}

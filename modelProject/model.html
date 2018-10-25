@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover" />
+	    <meta name="apple-mobile-web-app-capable" content="yes"><!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 设置苹果工具栏颜色 -->
+	    <meta name="format-detection" content="telephone=no,email=no"><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	    <meta name="apple-touch-fullscreen" content="yes"><!--"添加到主屏幕“后，全屏显示-->
+		<meta name="format-detection" content="telephone=no,email=no"><!--不识别电话号码和邮箱-->
+		<meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes"><!--应用信息，保留系统历史记录，运动效果-->
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /><!--不缓存-->
+		<meta http-equiv="Expires" content="-1">
+	    <meta http-equiv="Cache-Control" content="no-cache">
+	    <meta http-equiv="Pragma" content="no-cache">
+		<title>模板页面</title>
+		<script type="text/javascript">
+			;(function flexible(window, document) {
+				var docEl = document.documentElement;
+				var dpr = window.devicePixelRatio || 1;
+				function setBodyFontSize() {
+					if(document.body) {
+						document.body.style.fontSize = '16px';
+					} else {
+						document.addEventListener('DOMContentLoaded', setBodyFontSize);
+					}
+				}
+				setBodyFontSize();
+				function setRemUnit() {
+					var rem = docEl.clientWidth / 3.75;
+					docEl.style.fontSize = rem + 'px';
+				}
+				setRemUnit();
+				window.addEventListener('resize', setRemUnit);
+				window.addEventListener('pageshow', function(e) {
+					if(e.persisted) {
+						setRemUnit();
+					}
+				})
+				if(dpr >= 2) {
+					var fakeBody = document.createElement('body');
+					var testElement = document.createElement('div');
+					testElement.style.border = '.5px solid transparent';
+					fakeBody.appendChild(testElement);
+					docEl.appendChild(fakeBody);
+					if(testElement.offsetHeight === 1) {
+						docEl.classList.add('hairlines');
+					}
+					docEl.removeChild(fakeBody);
+				}
+			}(window, document));
+		</script>
+		<link rel="stylesheet" href="css/model.css" />
+	</head>
+
+	<body>
+		<header>
+			<a class="agentBack">
+				<img src="images/icon_goback.png" />
+			</a>
+			<span class="agentSpan">用户功能介绍</span>
+		</header>
+		<div class="content">
+			<div class="coreFun">
+				<span class="green">核心功能</span>
+			</div>
+			<ul class="list core">
+				<li>
+					<section>
+						<span class="question">1.如何抢福袋？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img data-original="images/q01.png" class='piclist_img lazy'/>
+						<p class="imgDes">操作第一步：点击任意福袋</p>
+						<img data-original="images/q02.png" class='piclist_img lazy'/>
+						<p class="imgDes">第二步：互动让用户猜猜福袋有多大，点击查看</p>
+						<img data-original="images/q03.png" class='piclist_img lazy'/>
+						<img data-original="images/q04.png" class='piclist_img lazy'/>
+						<img data-original="images/q05.png" class='piclist_img lazy'/>
+						<p class="imgDes">第三步：浏览内容的同时倒计时8秒，倒计时结束后，在右下角后点击领取福袋按钮，会弹出领取的金额，直接存入账户余额。<br /> 备注：由平台、好友、商家发布的福袋倒计时8秒后便可领取（如果福袋已经被领取，倒计时结束会显示“朕知道了”按钮）。</p>
+					</div>
+				</li>
+				<li>
+					<section>
+						<span class="question">2.为什么要邀请好友？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img data-original="images/yq01.png" class='piclist_img lazy'/>
+						<p class="imgDes">入口：在我的好友-邀请好友</p>
+						<img data-original="images/yq02.png" class='piclist_img lazy'/>
+						<p class="imgDes">操作：在邀请界面点击分享的渠道,分享到对应的渠道里面。用户通过第三方链接或者直接下载APP完成注册。<br /> 备注：当邀请的好友完成注册后，可以获得奖励金。</p>
+					</div>
+				</li>
+				<li>
+					<section>
+						<span class="question">3.为什么要完善个人资料？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img data-original="images/WS.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							入口：在我的个人中心点击头像。<br /> 操作：完善头像、昵称、性别、情感状态、生日、兴趣爱好、职业、所在省市、收货地址基本信息,点击提交直接保存，再次打开后数据将时修改过的最新信息。<br>备注：完善资料能提升获得大额福袋的概率
+						</p>
+					</div>
+				</li>
+				<li>
+					<section>
+						<span class="question">4.如何提现？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img data-original="images/tx.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							入口：个人中心-我的零钱 <br>操作：输入提现金额点击提现，提现成功前直接到账,返回到零钱界面，账户余额是提现后的余额。 备注：提现金额大于等于5元，最高不能超过5000元，每天只能提现一次。
+						</p>
+					</div>
+				</li>
+				<li>
+					<section>
+						<span class="question">5.消费金如何使用？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img data-original="images/xiaofeijin01.png" class='piclist_img lazy'/>
+						<p class="imgDes">第一步：注册用户获得200消费金</p>
+						<img data-original="images/xiaofeijin02.png" class='piclist_img lazy'/>
+						<img data-original="images/xiaofeijin03.png" class='piclist_img lazy'/>
+						<p class="imgDes">第二步：选择商家 浏览商家提供的服务</p>
+						<img data-original="images/xiaofeijin04.png" class='piclist_img lazy'/>
+						<p class="imgDes">第三步：选择好店铺，进店消费在柜台结账时，打开APP在优惠买单界面进行付款，可以使用消费金进行抵扣。</p>
+					</div>
+				</li>
+			</ul>
+			<div class="coreFun">
+				<span class="yellow">辅助功能</span>
+			</div>
+			<ul class="list non-core">
+				<li>
+					<section>
+						<span class="question">1.为什么要发福袋？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img  data-original="images/fu01.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							<span>入口：</span> 
+							 在福袋中心点击发布按钮
+						</p>
+						<img  data-original="images/fu02.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							<span>操作第一步：</span> 
+							选择福袋业务类型
+						</p>
+						<img  data-original="images/fu03.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							第二步：填写关于福袋的介绍
+						</p>
+						<img  data-original="images/fu04.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							第三步：绑定优惠券（选填项）
+						</p>
+						<img  data-original="images/fu05.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							第四步：选择投放用户群体的基本信息
+						</p>
+						<img data-original="images/fu06.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							<span>第五步：点击发布完成</span>
+							 备注：发布福袋以后，会精准投放给对应的用户，最终实现高效的线下到店转化率。
+						</p>
+					</div>
+				</li>
+				<li>
+					<section>
+						<span class="question">2.为什么要发圈子动态？</span>
+						<span class="iconfont nnfd-jiantouxia"></span>
+					</section>
+					<div class="answer">
+						<img  data-original="images/fa01.png" class='piclist_img lazy'/>
+						<p class="imgDes">
+							<span>入口：</span> 
+							在我的好友-圈子右上角发布
+						</p>
+						<img  data-original="images/fa02.png" class='piclist_img lazy'/>
+						<p class="imgText">动态</p>
+						<img   data-original="images/fa03.png" class='piclist_img lazy'/>
+						<p class="imgText">优惠券</p>
+						<img  data-original="images/fa04.png" class='piclist_img lazy'/>
+						<p class="imgText">福袋接力</p>
+						<p class="imgDes">发布类型为三种：动态、优惠券、接力福袋，发布的内容可以被关注的用户。</p>
+						<img  data-original="images/fa05.png" class='piclist_img lazy'/>
+						<img  data-original="images/fa06.png" class='piclist_img lazy'/>
+						<p class="imgDes">操作：如果是说说，填写内容描述+图片/视频点击发布直接发布完成。如果是优惠券需要选择优惠券并填写对应的数量、对优惠券加以描述点击发布直接发布完成。如果是福袋接力，填写红包金额输入文字描述点击发布直接发布完成。</p>
+					</div>
+				</li>
+			</ul>
+			<!--返回顶部-->
+			<div class="back-to-top" style="display:none;"></div>
+		</div>
+		<script type="text/javascript" src="js/common/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="js/common/jquery.lazyload.min.js"></script>
+		<script type="text/javascript" src="js/common/jquery-tap.js"></script>
+		<script type="text/javascript" src="js/model.js" ></script>
+	</body>
+</html>
